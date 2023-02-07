@@ -1,0 +1,154 @@
+:root{
+    --border-radius: 20px;
+    --background-obj: rgba(0,0,0,0.38);
+    --color: white;
+    --font-size:100px;
+}
+
+
+body {
+    margin: 0;
+    background: linear-gradient(312deg, #5f75da, #5a36f5, #60b3d8, #379f3f, #146ccc);
+    background-size: 300% 300%;
+    animation: body 20s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p,b,span,footer{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+*{
+	user-select: none;
+}
+
+.invisible{
+    opacity: 0%;
+}
+
+input{
+    position: absolute;
+    top: -1000000px;
+}
+
+.hidden {
+    display: none;
+}
+
+#progress-bar {
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: red;
+}
+
+#progress-bar div {
+    position: absolute;
+	height: 100%;
+    height: 10px;
+    background-color: aquamarine;
+}
+
+.completeTime {
+    animation-name: completeBar;
+    animation-duration: var(--time);
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+#data p{
+    background: var(--background-obj);
+    color: var(--color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+}
+
+#word{
+    font-size: var(--font-size);
+}
+
+.letterActive{
+    color: red;
+}
+
+.show{
+	animation: aparecer;
+	animation-duration: 500ms;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+
+.disappear{
+    position: absolute;
+    font-size: var(--font-size);
+	top: var(--top);
+	left: var(--left);
+    animation-name: disappear;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+}
+
+#correct span{
+    color: black;
+}
+
+#incorrect span{
+    color: red;
+}
+
+button{
+    cursor: pointer;
+    padding: 50px;
+    border: unset;
+    border-radius: var(--border-radius);
+    background: var(--background-obj);
+    color: var(--color);
+    font-size: var(--font-size);
+}
+
+@keyframes completeBar {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+
+@keyframes body {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        
+    }
+
+    50% {
+        color: azure;
+    }
+
+    100% {
+        transform: translateY(-100%);
+        opacity: 0%;
+        font-size: var(--font-size/2);
+    }
+}
