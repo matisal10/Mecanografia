@@ -8,9 +8,9 @@
 
 body {
     margin: 0;
-    background: linear-gradient(312deg, #5f75da, #5a36f5, #60b3d8, #379f3f, #146ccc);
+    background: linear-gradient(312deg, #5f75da, #5a36f5, #60b3d8, #5a7c5d, #146ccc);
     background-size: 300% 300%;
-    animation: body 20s ease infinite;
+    animation: body 0s ease infinite;
     min-height: 100vh;
     display: flex;
     flex-direction: column;

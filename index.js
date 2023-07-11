@@ -8,7 +8,7 @@ const restarBtn = document.querySelector('#restar')
 const wordContainer = document.getElementById('word')
 const input = document.querySelector('input')
 
-const time = 10
+const time = 60
 let lettersCorrects;
 let lettersIncorrects;
 let FinishedWords;
